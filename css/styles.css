@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+
+}
+
+body {
+  font-family: DM Mono;
+  font-size: calc(2vw + 0.2rem);
+  background-color: #000000;
+}
+
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+
+
+.layout {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid:
+      "header" auto
+      "main" 1fr
+      "footer" auto
+      / 1fr;
+    gap: 8px;
+
+    background-color:red;
+  }
+
+  .header {
+    grid-area: header; 
+    background-color: #f2f6f8;
+    width: 100%;
+    height: 100px;
+
+    background-color:greenyellow;
+    }
+  .main {
+    grid-area: main;
+    }
+  .footer {
+    width: 100%;
+    height: 70px;
+    grid-area: footer;
+
+    background-color:blue;
+    }

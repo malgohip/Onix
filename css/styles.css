@@ -7,7 +7,7 @@
 }
 
 body {
-    min-height: 100vh;
+    min-height: 100%;
     font-size: calc(0.5em + 0.5vw);
     font-family: 'DM Mono', 'Arial Narrow', Arial, sans-serif;
 }
@@ -21,36 +21,43 @@ body {
 /* header start ↓ */
 .header {
     width: 100%;
-    height: 4%;
+    height: 5%;
     position: fixed;
     top: 0;
     display: flex;
     background-color: #254c6f;
 }
 
-.logo_container{
+.logo_container {
     width: 7%;
     height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
 }
 
-.logo {
+.logo_button {
     width: 5em;
     height: 3.5em;
     padding: 0.1875rem;
     margin-left: 1.25rem;
     display: flex;
-    justify-content:center;
+    justify-content: center;
     align-items: center;
 }
 
-
-.container{
-    width:80%;
-    height: 100%;
+.logo {
+    width: 100px;
+    height: 100px;
 }
 
 
-.login_container{
+.container {
+    width: 80%;
+    height: 100%;
+}
+
+.login_container {
     width: 10%;
     height: 100%;
     display: flex;
@@ -60,7 +67,7 @@ body {
 
 .login_button {
     font-family: monospace;
-    font-size: 1rem;
+    font-size: 0.8rem;
     color: #FAFAFA;
     text-transform: uppercase;
     padding: 10px 20px;
@@ -72,68 +79,63 @@ body {
     margin: 35px 0;
 }
 
-  .login_button:active {
+.login_button:active {
     box-shadow: none;
     transform: translate(3px, 3px);
-  }
-
-.account_container{
-    width: 3%;
-    height: 100%;
 }
 
-.account_button{
+.account_container {
+    width: 3%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: left;
+}
+
+.account_button {
     width: 45px;
     height: 45px;
-    margin-top:3px;
+    margin-top: 3px;
     border-radius: 50%;
 }
 
 /* header end */
 
-
 /* main begin */
-.main{
+.main {
     width: 100%;
-    height: 100vh;
+    min-height:100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    padding-top: 3%;
     background-color: #000A12;
 }
 
-.mySlides {
-    display: none;
-}
 
-img {
-    vertical-align: middle;
+.slide_container {
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
 }
 
 /* Slideshow container */
 .slideshow_container {
-    max-width: 1000px;
+    width: 100%;
+    height: auto;
     position: relative;
-    margin: auto;
-
-    object-fit: cover;
+    margin: 0 auto;
 }
 
-
-/* image size */
-.imagen {
-    width: 1000px;
-    height: 300px;
-    object-fit: cover;
+/* Image size */
+.mySlides img {
+    width: 100%;
+    height: auto;
     border-radius: 10px;
-    /* border: 0.0625rem solid #8A0BD2; */
 }
-
-
 
 /* Next & previous buttons */
-.prev,
-.next {
+.prev, .next {
     cursor: pointer;
     position: absolute;
     top: 50%;
@@ -146,21 +148,18 @@ img {
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
     user-select: none;
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
-/* Position the "next button" to the right */
 .next {
     right: 0;
     border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover,
-.next:hover {
+/* On hover, add a black background color with a little transparency */
+.prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
-
-
 
 /* Caption text */
 .text {
@@ -188,16 +187,15 @@ img {
     height: 15px;
     width: 15px;
     margin: 0 2px;
-    background-color: #bbb;
+    background-color: #717171;
     border-radius: 50%;
     display: inline-block;
     transition: background-color 0.6s ease;
 }
 
 .active {
-    background-color: #717171;
+    background-color: #fafafa;
 }
-
 
 /* Fading animation */
 .fade {
@@ -205,34 +203,31 @@ img {
     animation-duration: 2s;
 }
 
-
-
 @keyframes fade {
     from {
-        opacity: .4
+        opacity: 0.4;
     }
-
     to {
-        opacity: 1
+        opacity: 1;
     }
 }
 
 /* On smaller screens, decrease text size */
 @media only screen and (max-width: 300px) {
     .text {
-        font-size: 11px
+        font-size: 11px;
     }
 }
 
 /* main end */
 
-
 /* footer begin */
 .footer {
     width: 100%;
-    height: 30px;
+    height: 3%; /* Cambia la altura a un valor fijo en píxeles */
     position: fixed;
     bottom: 0;
-    background-color:#001D36;
+    background-color: #001D36;
 }
+
 /* footer end */

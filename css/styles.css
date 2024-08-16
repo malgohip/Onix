@@ -9,7 +9,7 @@
 body {
     min-height: 100%;
     font-size: calc(0.5em + 0.5vw);
-    font-family: 'DM Mono', 'Arial Narrow', Arial, sans-serif;
+    font-family: 'DM Mono';
 }
 
 .layout {
@@ -28,35 +28,43 @@ body {
     background-color: #254c6f;
 }
 
+/* logo start */
 .logo_container {
-    width: 7%;
+    width: 6%;
     height: 100%;
     display: flex;
     align-items: center;
     justify-content: left;
+    background-color: #fafafa;
 }
 
 .logo_button {
     width: 5em;
-    height: 3.5em;
-    padding: 0.1875rem;
+    height: 4em;
     margin-left: 1.25rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    border:none;
+    padding: 10px;
+    cursor:pointer;
 }
 
 .logo {
     width: 100px;
-    height: 100px;
+    height: auto;
 }
 
+/* logo end */
 
-.container {
-    width: 80%;
+/* empty container header start */
+.empty_container_header {
+    width: 81%;
     height: 100%;
 }
+/* empty container header end */
 
+/* login begin */
 .login_container {
     width: 10%;
     height: 100%;
@@ -66,7 +74,6 @@ body {
 }
 
 .login_button {
-    font-family: monospace;
     font-size: 0.8rem;
     color: #FAFAFA;
     text-transform: uppercase;
@@ -83,7 +90,9 @@ body {
     box-shadow: none;
     transform: translate(3px, 3px);
 }
+/* login end */
 
+/* account button start */
 .account_container {
     width: 3%;
     height: 100%;
@@ -97,7 +106,9 @@ body {
     height: 45px;
     margin-top: 3px;
     border-radius: 50%;
+    cursor: pointer;
 }
+/* account button end */
 
 /* header end */
 
@@ -107,12 +118,24 @@ body {
     min-height:100vh;
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding-top: 3%;
     background-color: #000A12;
 }
 
+/* empty container main start */
+.empty_container_main {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px
+}
+/* empty container main end */
 
+/* slideshow start */
 .slide_container {
     width: 100%;
     height: auto;
@@ -146,7 +169,7 @@ body {
     font-weight: bold;
     font-size: 18px;
     transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
+    border-radius: 0 5px 5px 0;
     user-select: none;
     background-color: rgba(0, 0, 0, 0.5);
 }
@@ -218,6 +241,37 @@ body {
         font-size: 11px;
     }
 }
+/* slideshow end */
+
+/* category panel start */
+.category_container {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    padding: 20px 0; 
+}
+
+.grid_layout {
+    display: grid;
+    column-gap: 20px;
+    row-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 300px));
+    justify-content: center; 
+}
+
+.item {
+    min-height: 300px;
+    box-sizing: border-box;
+    background-color: aqua;
+    color: #6d6d99;
+    text-align: center;
+    border-radius: 17px;
+    background: #e0e0e0;
+    box-shadow: 5px 5px 7px #9d9d9d, -5px -5px 7px #ffffff;
+}
+/* category panel end */
 
 /* main end */
 
@@ -228,6 +282,9 @@ body {
     position: fixed;
     bottom: 0;
     background-color: #001D36;
+    padding-top:5px;
+    text-align: center;
+    color:#fafafa;
 }
 
 /* footer end */

@@ -12,29 +12,32 @@
     <section class="layout">
         <!-- header ↓-->
         <header class="header">
-            <!-- logo begin -->
+            <!-- logo start -->
             <div class="logo_container">
-                <a href="index.html">
-                    <img class="logo" src="/source/onix_logo.svg" alt="Onix"> 
-                </a>
+                <button class="logo_button">
+                    <a href="index.html">
+                        <img class="logo" src="/source/onix_logo.svg" alt="Onix"> 
+                    </a>
+                </button>
             </div>
             <!-- logo end -->
 
-            <!-- empty div begin -->
-            <div class="container"></div>
+            <!-- empty div start -->
+            <div class="empty_container_header"></div>
             <!-- empty div end -->
 
-            <!-- login begin -->
+            <!-- login start -->
             <div class="login_container">
                 <div class="login">
                     <button class="login_button">
-                        Login / Sign up
+                        <a href="login.html"></a>
+                            <p>Login / Sign up</p>
                     </button>
                 </div>
             </div>
             <!-- login end -->
 
-            <!-- account icon begin -->
+            <!-- account icon start -->
             <div class="account_container">
                 <div class="account">
                     <button class="account_button">
@@ -46,49 +49,65 @@
         </header>
         <!-- header end -->
 
-        <!-- main begin -->
+        <!-- main start -->
         <main class="main">
-            <div class="slide_container">
-                <!-- Slideshow container -->
-                <div class="slideshow_container">
+            <div class="empty_container_main">
+                <!-- slider start -->
+                <div class="slide_container">
+                    <!-- Slideshow container -->
+                    <div class="slideshow_container">
 
-                    <!-- Full-width images with number and caption text -->
-                    <div class="mySlides fade">
-                        <div class="numbertext">1 / 3</div>
-                        <img src="/source/prueba.jpg" style="width:100%">
-                        <div class="text">Texto_1</div>
+                        <!-- Full-width images with number and caption text -->
+                        <div class="mySlides fade">
+                            <div class="numbertext">1 / 3</div>
+                            <img src="/source/prueba.jpg" style="width:100%">
+                            <div class="text">Texto_1</div>
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">2 / 3</div>
+                            <img src="/source/prueba.jpg" style="width:100%">
+                            <div class="text">Texto_2</div>
+                        </div>
+
+                        <div class="mySlides fade">
+                            <div class="numbertext">3 / 3</div>
+                            <img src="/source/prueba.jpg" style="width:100%">
+                            <div class="text">Texto_3</div>
+                        </div>
+
+                        <!-- Next and previous buttons -->
+                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
                     </div>
+                    <br>
 
-                    <div class="mySlides fade">
-                        <div class="numbertext">2 / 3</div>
-                        <img src="/source/prueba.jpg" style="width:100%">
-                        <div class="text">Texto_2</div>
+                    <!-- The dots/circles -->
+                    <div style="text-align:center">
+                        <span class="dot" onclick="currentSlide(1)"></span>
+                        <span class="dot" onclick="currentSlide(2)"></span>
+                        <span class="dot" onclick="currentSlide(3)"></span>
                     </div>
-
-                    <div class="mySlides fade">
-                        <div class="numbertext">3 / 3</div>
-                        <img src="/source/prueba.jpg" style="width:100%">
-                        <div class="text">Texto_3</div>
-                    </div>
-
-                    <!-- Next and previous buttons -->
-                    <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                    <a class="next" onclick="plusSlides(1)">&#10095;</a>
                 </div>
-                <br>
+                <!-- slider end -->
 
-                <!-- The dots/circles -->
-                <div style="text-align:center">
-                    <span class="dot" onclick="currentSlide(1)"></span>
-                    <span class="dot" onclick="currentSlide(2)"></span>
-                    <span class="dot" onclick="currentSlide(3)"></span>
+                <!-- category panel start -->
+            <div class="category_container">
+                <div class="grid_layout">
+                    <div class="item comida">Comida</div>
+                    <div class="item artesanias">Artesanias</div>
+                    <div class="item papeleria">Papeleria</div>
+                    <div class="item varios">Varios</div>
                 </div>
             </div>
+            <!-- catregory panel end -->
+        </div>
         </main>
         <!-- main end -->
 
-        <!-- footer begin -->
+        <!-- footer start -->
         <footer class="footer">
+            <p>Powered by Onix_Team® 2024</p>
         </footer>
         <!-- footer end -->
     </section>

@@ -1,27 +1,16 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&display=swap');
-
-* {
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
 }
 
-body {
-    min-height: 100%;
-    font-size: calc(0.5em + 0.5vw);
-    font-family: 'DM Mono';
-}
-
-.layout {
+#fullDiv {
     width: 100%;
-    display: grid;
-    grid-template-rows: auto auto auto;
+    height: 100%;
+    background-color: lightblue; /* Puedes cambiar el color */
 }
 
-
-/* main begin */
-/* fondo start */
-.fondo {
+.container {
     width: 100%;
     height: 100%;
     --s: 200px; /* control the size */
@@ -42,21 +31,20 @@ body {
         var(--c3) 0 180deg
       );
     background-size: var(--s) calc(var(--s) * 0.577);
-}
-/* fondo end */
+  }
 
-/* login form start */
 .wrapper {
     --input-focus: #2d8cf0;
     --font-color: #fefefe;
     --font-color-sub: #7e7e7e;
-    --bg-color: #111;
+    --bg-color: #254D70;
     --bg-color-alt: #7e7e7e;
     --main-color: #fefefe;
-      /* display: flex; */
-      /* flex-direction: column; */
-      /* align-items: center; */
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Hace que el contenedor tenga el 100% de la altura de la ventana */
+}
   /* switch card */
   .switch {
     transform: translateY(-200px);
@@ -72,7 +60,7 @@ body {
   
   .card-side::before {
     position: absolute;
-    content: 'Log in';
+    content: 'Inicio';
     left: -70px;
     top: 0;
     width: 100px;
@@ -83,7 +71,7 @@ body {
   
   .card-side::after {
     position: absolute;
-    content: 'Sign up';
+    content: 'Registro';
     left: 70px;
     top: 0;
     width: 100px;
@@ -243,20 +231,3 @@ body {
     color: var(--font-color);
     cursor: pointer;
   } 
-
-/* login form end */
-/* main end */
-
-/* footer begin */
-.footer {
-    width: 100%;
-    height: 3%; /* Cambia la altura a un valor fijo en píxeles */
-    position: fixed;
-    bottom: 0;
-    background-color: #001D36;
-    padding-top:5px;
-    text-align: center;
-    color:#fafafa;
-}
-
-/* footer end */

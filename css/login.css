@@ -16,8 +16,8 @@ html, body {
     width: 100%;
     height: 100%;
     --s: 200px; /* control the size */
-    --c1: #233546;
-    --c2: #83A6C5;
+    --c1: #004280;
+    --c2: #296fbb;
     --c3: #CDE8FF;
   
     background: repeating-conic-gradient(
@@ -37,11 +37,11 @@ html, body {
 
 .wrapper {
     --input-focus: #2d8cf0;
-    --font-color: #fefefe;
+    --font-color: #fafafa;
     --font-color-sub: #7e7e7e;
-    --bg-color: #254D70;
+    --bg-color: #004280;
     --bg-color-alt: #7e7e7e;
-    --main-color: #fefefe;
+    --main-color: #fafafa;
     display: flex;
     justify-content: center;
     align-items: center;

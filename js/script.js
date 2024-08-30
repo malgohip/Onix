@@ -36,6 +36,6 @@ function showSlides(n) {
     slides[slideIndex - 1].style.display = "block";  
     dots[slideIndex - 1].className += " active";
 
-    // Uncomment the following line to automatically switch slides every 5 seconds:
-    setTimeout(() => plusSlides(1), 5000); 
+    
+    setTimeout(() => plusSlides(1), 10000); 
 }

@@ -9,7 +9,7 @@
 body {
     min-height: 100%;
     font-size: calc(0.5em + 0.5vw);
-    font-family: 'DM Mono';
+    font-family: 'DM Mono', monospace;
 }
 
 .layout {
@@ -31,7 +31,7 @@ body {
 
 /* logo start */
 .logo_container {
-    width: 6%;
+    width: 15%;
     height: 80%;
     display: flex;
     align-items: center;
@@ -45,29 +45,29 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    border:none;
-    cursor:pointer;
+    border: none;
+    cursor: pointer;
 }
 
 /* logo end */
 
 /* title_container start */
 .title_container {
-    width: 81%;
+    width: 70%;
     height: 100%;
-    color:#fafafa;
+    color: #fafafa;
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 2em;
-    padding-left: 7%;
-
+    font-size: 1.5em;
+    padding-left: 2%;
+    text-align: center;
 }
 /* title_container end */
 
 /* login begin */
 .login_container {
-    width: 10%;
+    width: 15%;
     height: 100%;
     display: flex;
     align-items: center;
@@ -94,16 +94,16 @@ body {
 
 /* account button start */
 .account_container {
-    width: 3%;
+    width: 10%;
     height: 100%;
     display: flex;
     align-items: center;
-    justify-content: left;
+    justify-content: center;
 }
 
-.account{
+.account {
     width: 40px;
-    height: 40x;
+    height: 40px;
     margin-top: 3px;
     border-radius: 50%;
     cursor: pointer;
@@ -113,11 +113,10 @@ body {
 
 /* header end */
 
-
 /* main begin */
 .main {
     width: 100%;
-    min-height:100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -132,7 +131,7 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: px
+    padding: 3%;
 }
 /* empty container main end */
 
@@ -216,29 +215,98 @@ body {
     }
 }
 
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-    .text {
-        font-size: 11px;
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+    .header {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .logo_container, .login_container, .account_container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logo {
+        margin-left: 0;
+    }
+
+    .title_container {
+        font-size: 1.2em;
+        padding-left: 0;
+    }
+
+    .login_button {
+        margin: 20px 0;
+        padding: 8px 16px;
+    }
+
+    .account {
+        width: 35px;
+        height: 35px;
     }
 }
+
+@media only screen and (max-width: 480px) {
+    .header {
+        height: auto;
+        flex-direction: column;
+    }
+
+    .logo_container, .login_container, .account_container {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .logo {
+        width: 4em;
+    }
+
+    .title_container {
+        font-size: 1em;
+    }
+
+    .login_button {
+        font-size: 0.5rem;
+        padding: 6px 12px;
+    }
+
+    .account {
+        width: 30px;
+        height: 30px;
+    }
+
+    .category_container {
+        flex-direction: column;
+        row-gap: 10px;
+    }
+
+    .item {
+        min-width: 200px;
+        min-height: 200px;
+    }
+
+    .brutalist-card {
+        width: 200px;
+    }
+}
+
 /* slideshow end */
 
 /* category panel start */
 .category_container {
     width: 100%;
     height: auto;
-    display: grid;
-    column-gap: 20px;
-    row-gap: 20px;
     display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
     justify-content: space-around; 
     padding: 20px; 
 }
 
 .item {
-    min-width: 300px;
-    min-height: 300px;
+    min-width: 250px;
+    min-height: 250px;
     box-sizing: border-box;
     text-align: center;
 }
@@ -249,28 +317,28 @@ body {
     width: 250px;
     border: 4px solid #fafafa;
     background-color: #252525;
-    padding: 1.5rem;
+    padding: 1.3rem;
     box-shadow: 10px 10px 0 #fafafa;
-    font-family: "DM Mono";
-  }
+    font-family: "DM Mono", monospace;
+}
 
-  .brutalist-card__header {
+.brutalist-card__header {
     display: flex;
     align-items: center;
     gap: 1rem;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
     border-bottom: 2px solid #fafafa;
-    padding-bottom: 1rem;
-  }
-    
-  .brutalist-card__actions {
+    padding-bottom: 0.5rem;
+}
+
+.brutalist-card__actions {
     margin-top: 1rem;
-  }
-  
-  .brutalist-card__button {
+}
+
+.brutalist-card__button {
     display: block;
     width: 100%;
-    padding: 0.75rem;
+    padding: 0.5rem;
     text-align: center;
     font-size: 1rem;
     font-weight: 700;
@@ -282,20 +350,19 @@ body {
     box-shadow: 5px 5px 0 #fafafa;
     overflow: hidden;
     text-decoration: none;
-    margin-bottom: 1rem;
-  }
-    
-  .brutalist-card__button--mark:hover {
+    margin-bottom: 0.5rem;
+}
+
+.brutalist-card__button--mark:hover {
     background-color: #296fbb;
     border-color: #296fbb;
     color: #fff;
     box-shadow: 7px 7px 0 #004280;
-  }
-  .brutalist-card__button:active {
+}
+.brutalist-card__button:active {
     transform: translate(5px, 5px);
     box-shadow: none;
-  }
-  
+}
 
 /* content card end */
 
@@ -305,23 +372,23 @@ body {
 .store_layout {
     width: 100%;
     display: flex;
-    gap: 15px;
+    gap: 50px;
     flex-wrap: wrap;
-  }
+    margin: 2%;
+    align-items: flex-start;
+    justify-content: center;
+}
 /* store_layout end */
 
-/* main end */
-
-/* footer begin */
+/* footer start */
 .footer {
     width: 100%;
-    height: 3%; /* Cambia la altura a un valor fijo en píxeles */
+    height: auto; /* Adjust to fit content */
     position: fixed;
     bottom: 0;
     background-color: #004280;
-    padding-top:5px;
+    padding: 10px;
     text-align: center;
-    color:#fafafa;
+    color: #fafafa;
 }
-
 /* footer end */

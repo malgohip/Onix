@@ -7,7 +7,7 @@
 }
 
 body {
-    min-height: 100%;
+    height: 100vh;
     font-size: calc(0.5em + 0.5vw);
     font-family: 'DM Mono', monospace;
 }
@@ -37,6 +37,7 @@ body {
     align-items: center;
     justify-content: left;
     padding-top: 10px;
+    background-color: purple;
 }
 
 .logo {
@@ -62,6 +63,7 @@ body {
     font-size: 1.5em;
     padding-left: 2%;
     text-align: center;
+    background-color: aqua;
 }
 /* title_container end */
 
@@ -72,6 +74,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: yellow;
 }
 
 .login_button {
@@ -219,7 +222,7 @@ body {
 @media only screen and (max-width: 768px) {
     .header {
         height: auto;
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .logo_container, .login_container, .account_container {
@@ -250,7 +253,7 @@ body {
 @media only screen and (max-width: 480px) {
     .header {
         height: auto;
-        flex-direction: column;
+        flex-direction: row;
     }
 
     .logo_container, .login_container, .account_container {
@@ -278,6 +281,8 @@ body {
 
     .category_container {
         flex-direction: column;
+        justify-content: center;
+        align-items: center;
         row-gap: 10px;
     }
 

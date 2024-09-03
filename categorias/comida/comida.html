@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="source/onix_favicon.png" type="image/x-icon">
     <title>Onix_Project</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="Onix/styles.css">
 </head>
 
 <body>
@@ -14,14 +14,16 @@
         <header class="header">
             <!-- logo start -->
             <div class="logo_container">
-                <a href="index.html">
+                <a href="Onix/index.html">
                     <img class="logo" src="source\onix_logo_txt.png" alt="Onix"> 
                 </a>
             </div>
             <!-- logo end -->
 
             <!-- titlte container start -->
-            <div class="title_container"></div>
+            <div class="title_container">
+                <b>Comida</b>
+            </div>
             <!-- titlte container end -->
 
 
@@ -44,90 +46,73 @@
         <!-- header end -->
 
         <!-- main start -->
-        <main class="main">
-            <div class="empty_container_main">
-                <!-- slider start -->
-                <div class="slide_container">
-                    <!-- Slideshow container -->
-                    <div class="slideshow_container">
+        <main class="main">                
+            <!-- store layout start -->
 
-                        <!-- Full-width images with number and caption text -->
-                        <div class="mySlides fade">
-                            <img src="source\prueba.jpg" style="width:100%">
-                        </div>
-
-                        <div class="mySlides fade">
-                            <img src="source\prueba.jpg" style="width:100%">
-                        </div>
-
-                        <div class="mySlides fade">
-                            <img src="source\prueba.jpg" style="width:100%">
-                        </div>
-
-                        <!-- Next and previous buttons -->
-                        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                        <a class="next" onclick="plusSlides(1)">&#10095;</a>
-                    </div>
-                    <br>
-
-                    <!-- The dots/circles -->
-                    <div style="text-align:center">
-                        <span class="dot" onclick="currentSlide(1)"></span>
-                        <span class="dot" onclick="currentSlide(2)"></span>
-                        <span class="dot" onclick="currentSlide(3)"></span>
-                    </div>
-                </div>
-                <!-- slider end -->
-
-                <!-- category panel start -->
-            <div class="category_container">
-                <div class="item comida">
+            <section class="store_layout">
+                <div class="item Comida">
                     <div class="brutalist-card">
                         <div class="brutalist-card__header">
-                            <img src="source\pepega.gif" alt="comida" style="width:100%">
+                            <img src="source\pepega.gif" alt="Comida" style="width:100%">
                         </div>
                         <div class="brutalist-card__actions">
-                          <a class="brutalist-card__button brutalist-card__button--mark" href="categorias/comida/comida.html">Comida</a>
+                          <a class="brutalist-card__button brutalist-card__button--mark" href="chazas/chaza_1.html">Chaza_1</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="item artesanias">
+                <div class="item Comida">
                     <div class="brutalist-card">
                         <div class="brutalist-card__header">
-                            <img src="source\pepega.gif" alt="artesanias" style="width:100%">
+                            <img src="source\pepega.gif" alt="Comida" style="width:100%">
                         </div>
                         <div class="brutalist-card__actions">
-                        <a class="brutalist-card__button brutalist-card__button--mark" href="categorias/artesanias/artesanias.html">Artesanias</a>
+                          <a class="brutalist-card__button brutalist-card__button--mark" href="#">Comida</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="item papeleria">
+                <div class="item Comida">
                     <div class="brutalist-card">
                         <div class="brutalist-card__header">
-                            <img src="source\pepega.gif" alt="" style="width:100%">
+                            <img src="source\pepega.gif" alt="Comida" style="width:100%">
                         </div>
                         <div class="brutalist-card__actions">
-                        <a class="brutalist-card__button brutalist-card__button--mark" href="categorias/papeleria/papeleria.html">Papeleria</a>
+                          <a class="brutalist-card__button brutalist-card__button--mark" href="#">Comida</a>
                         </div>
                     </div>
                 </div>
-
-                <div class="item varios">
+                <div class="item Comida">
                     <div class="brutalist-card">
                         <div class="brutalist-card__header">
-                            <img src="source\pepega.gif" alt="varios" style="width:100%">
+                            <img src="source\pepega.gif" alt="Comida" style="width:100%">
                         </div>
                         <div class="brutalist-card__actions">
-                        <a class="brutalist-card__button brutalist-card__button--mark" href="categorias/varios/varios.html">Varios</a>
+                          <a class="brutalist-card__button brutalist-card__button--mark" href="#">Comida</a>
                         </div>
                     </div>
                 </div>
-
-            </div>
+                <div class="item Comida">
+                    <div class="brutalist-card">
+                        <div class="brutalist-card__header">
+                            <img src="source\pepega.gif" alt="Comida" style="width:100%">
+                        </div>
+                        <div class="brutalist-card__actions">
+                          <a class="brutalist-card__button brutalist-card__button--mark" href="#">Comida</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="item Comida">
+                    <div class="brutalist-card">
+                        <div class="brutalist-card__header">
+                            <img src="source\pepega.gif" alt="Comida" style="width:100%">
+                        </div>
+                        <div class="brutalist-card__actions">
+                          <a class="brutalist-card__button brutalist-card__button--mark" href="#">Comida</a>
+                        </div>
+                    </div>
+                </div>
+              </section>
             <!-- catregory panel end -->
-        </div>
         </main>
         <!-- main end -->
 
@@ -138,7 +123,7 @@
         <!-- footer end -->
     </section>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
 

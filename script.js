@@ -1,41 +1,62 @@
-let slideIndex = 1; 
+let slideIndex = 0;
+let slides = document.getElementsByClassName("mySlides");
+let dots = document.getElementsByClassName("dot");
+let slideInterval;
 
-showSlides(slideIndex);
-
-// Next/previous controls
-function plusSlides(n) {
-    showSlides(slideIndex += n);
-}
-
-// Thumbnail image controls
-function currentSlide(n) {
-    showSlides(slideIndex = n);
-}
-
+// Función para mostrar la slide actual
 function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-
-    if (n > slides.length) { 
-        slideIndex = 1 
+    if (n > slides.length) {
+        slideIndex = 1;
+    } else if (n < 1) {
+        slideIndex = slides.length;
+    } else {
+        slideIndex = n;
     }
-
-    if (n < 1) { 
-        slideIndex = slides.length 
-    }
-
-    for (i = 0; i < slides.length; i++) {
+    
+    for (let i = 0; i < slides.length; i++) {
         slides[i].style.display = "none";  
     }
 
-    for (i = 0; i < dots.length; i++) {
+    for (let i = 0; i < dots.length; i++) {
         dots[i].className = dots[i].className.replace(" active", "");
     }
 
     slides[slideIndex - 1].style.display = "block";  
     dots[slideIndex - 1].className += " active";
-
-    
-    setTimeout(() => plusSlides(1), 10000); 
 }
+
+// Función para cambiar automáticamente las slides
+function autoSlides() {
+    slideIndex++;
+    showSlides(slideIndex);
+}
+
+// Inicializa la presentación automática
+function startAutoSlide() {
+    slideInterval = setInterval(autoSlides, 5000); // Cada 5 segundos
+}
+
+// Detiene la presentación automática
+function stopAutoSlide() {
+    clearInterval(slideInterval);
+}
+
+// Cambia manualmente a una slide específica
+function currentSlide(n) {
+    stopAutoSlide();  // Detener la automática al cambiar manualmente
+    showSlides(n);
+    startAutoSlide(); // Reiniciar la automática después del cambio manual
+}
+
+// Cambia manualmente a la siguiente o anterior slide
+function plusSlides(n) {
+    stopAutoSlide(); // Detener la automática al cambiar manualmente
+    showSlides(slideIndex + n);
+    startAutoSlide(); // Reiniciar la automática después del cambio manual
+}
+
+// Inicia el slideshow en el primer slide
+window.onload = function() {
+    showSlides(1);
+    startAutoSlide(); // Inicia la rotación automática
+};

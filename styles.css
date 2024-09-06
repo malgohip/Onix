@@ -4,146 +4,121 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-}
-
-body {
-    height: 100vh;
-    font-size: calc(0.5em + 0.5vw);
     font-family: 'DM Mono', monospace;
 }
 
+
+body {
+    font-size: calc(0.5em + 0.5vw);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
+    background-color:#252525;
+}
+
 .layout {
-    width: 100%;
+    width: 100vw;
+    padding: 4vw 0vw 0vw 0vw;
     display: grid;
     grid-template-rows: auto auto auto;
 }
 
-/* header start ↓ */
+/* header styles */
 .header {
-    width: 100%;
-    height: 5%;
-    position: fixed;
-    top: 0;
-    display: flex;
+    width: 100vw;
+    max-height:7vh;
     background-color: #296fbb;
-    z-index: 999999;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0vw 1.333vw 0vw 1.333vw;
+    color: white;
+    position: fixed; 
+    top: 0;
+    z-index: 1;
 }
 
-/* logo start */
+/* logo container */
 .logo_container {
-    width: 15%;
-    height: 80%;
+    width: 9vw;
+    height:7vh;
+    padding: 0.5vw 0vw 0vw 0vw;
     display: flex;
     align-items: center;
-    justify-content: left;
-    padding-top: 10px;
-    background-color: purple;
 }
 
 .logo {
-    width: 5em;
-    margin-left: 1em;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: none;
+    min-width: 4vw;
+    max-width: 5vw;
     cursor: pointer;
 }
 
-/* logo end */
-
-/* title_container start */
+/* title container */
 .title_container {
-    width: 70%;
-    height: 100%;
-    color: #fafafa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5em;
-    padding-left: 2%;
+    flex-grow: 1;
     text-align: center;
-    background-color: aqua;
+    color: #fafafa;
+    font-size: 1.5em;
 }
-/* title_container end */
 
-/* login begin */
 .login_container {
-    width: 15%;
-    height: 100%;
+    width: 16vw;
+    height:7vh;
     display: flex;
     align-items: center;
-    justify-content: center;
-    background-color: yellow;
+    justify-content: flex-end;
+    padding: 0vw 1vw 0vw 0vw;
 }
 
 .login_button {
-    font-size: 0.6rem;
+    font-size: 1rem;
+    font-weight: 500;
     color: #FAFAFA;
-    text-transform: uppercase;
-    padding: 10px 20px;
+    padding: 4px 8px;
     border: 2px solid #FAFAFA;
-    background: #252525;
+    background-color: #252525;
     box-shadow: 3px 3px #fafafa;
     cursor: pointer;
-    margin: 35px 0;
 }
 
 .login_button:active {
     box-shadow: none;
     transform: translate(3px, 3px);
 }
-/* login end */
 
-/* account button start */
 .account_container {
-    width: 10%;
-    height: 100%;
+    width: 3vw;
+    height: 7vh;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
 .account {
-    width: 40px;
-    height: 40px;
-    margin-top: 3px;
+    min-width: 1vw;
+    max-width: 2.5vw;
     border-radius: 50%;
-    cursor: pointer;
     background-color: #fafafa;
+    cursor: pointer;
 }
+
 /* account button end */
 
 /* header end */
 
 /* main begin */
 .main {
+    flex-grow: 1; 
     width: 100%;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding-top: 3%;
-    background-color: #000A12;
-}
-/* empty container main start */
-.empty_container_main {
-    width: 100%;
-    height: auto;
+    padding:0px 25px 0px 25px;
+    background-color: #252525;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    padding: 3%;
 }
-/* empty container main end */
+
 
 /* slideshow start */
-.slide_container {
-    width: 100%;
-    height: auto;
-    margin: 0 auto;
-}
 
 /* Slideshow container */
 .slideshow_container {
@@ -152,6 +127,8 @@ body {
     position: relative;
     margin: 0 auto;
 }
+
+
 
 /* Image size */
 .mySlides img {
@@ -182,7 +159,7 @@ body {
     border-radius: 3px 0 0 3px;
 }
 
-/* On hover, add a black background color with a little transparency */
+
 .prev:hover, .next:hover {
     background-color: rgba(0, 0, 0, 0.8);
 }
@@ -218,83 +195,27 @@ body {
     }
 }
 
-/* Responsive adjustments */
-@media only screen and (max-width: 768px) {
-    .header {
-        height: auto;
-        flex-direction: row;
-    }
-
-    .logo_container, .login_container, .account_container {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .logo {
-        margin-left: 0;
-    }
-
-    .title_container {
-        font-size: 1.2em;
-        padding-left: 0;
-    }
-
-    .login_button {
-        margin: 20px 0;
-        padding: 8px 16px;
-    }
-
-    .account {
-        width: 35px;
-        height: 35px;
-    }
+.item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(10, 10, 10);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%; 
+    max-width: 300px;
+    margin: 0 auto; 
 }
 
-@media only screen and (max-width: 480px) {
-    .header {
-        height: auto;
-        flex-direction: row;
-    }
 
-    .logo_container, .login_container, .account_container {
-        width: 100%;
-        justify-content: center;
-    }
-
-    .logo {
-        width: 4em;
-    }
-
-    .title_container {
-        font-size: 1em;
-    }
-
-    .login_button {
-        font-size: 0.5rem;
-        padding: 6px 12px;
-    }
-
-    .account {
-        width: 30px;
-        height: 30px;
-    }
-
-    .category_container {
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        row-gap: 10px;
-    }
-
-    .item {
-        min-width: 200px;
-        min-height: 200px;
-    }
-
-    .brutalist-card {
-        width: 200px;
-    }
+.item img {
+    width: 100%; 
+    height: auto;
+    border-radius: 5px;
 }
+
 
 /* slideshow end */
 
@@ -304,16 +225,13 @@ body {
     height: auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: space-around; 
-    padding: 20px; 
-}
-
-.item {
-    min-width: 250px;
-    min-height: 250px;
-    box-sizing: border-box;
-    text-align: center;
+    gap: 7px;
+    justify-content: space-around;
+    padding: 20px 1px 30px 1px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
 }
 
 /* content card start */
@@ -346,7 +264,7 @@ body {
     padding: 0.5rem;
     text-align: center;
     font-size: 1rem;
-    font-weight: 700;
+    font-weight: 500;
     border: 3px solid #fafafa;
     background-color: #252525;
     color: #fafafa;
@@ -385,6 +303,92 @@ body {
 }
 /* store_layout end */
 
+/* product_layout start */
+
+.product_layout {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 8px;
+    padding-top:200px ;
+}
+    
+.product{
+    padding: 100px;
+    border-radius:50px;
+    border:2px solid #252525;
+    background-color: yellow;
+    text-align: center;
+}
+
+.photo {
+    grid-column: span 5 / span 5;  
+    height: 20px;  
+}
+
+.map {
+    grid-column: span 2 / span 2;
+    grid-row: span 2 / span 2;
+    grid-row-start: 2;
+}
+
+.p_1 {
+    grid-column-start: 3;
+    grid-row-start: 2;
+}
+
+.p_2 {
+    grid-column-start: 4;
+    grid-row-start: 2;
+}
+
+.p_3 {
+    grid-column-start: 5;
+    grid-row-start: 2;
+}
+
+.p_4 {
+    grid-column-start: 3;
+    grid-row-start: 3;
+}
+
+.p_5 {
+    grid-column-start: 4;
+    grid-row-start: 3;
+}
+
+.p_6 {
+    grid-column-start: 5;
+    grid-row-start: 3;
+}
+
+.p_7 {
+    grid-row-start: 4;
+}
+
+.p_8 {
+    grid-row-start: 4;
+}
+
+.p_9 {
+    grid-row-start: 4;
+}
+
+.p_10 {
+    grid-row-start: 4;
+}
+
+.p_11 {
+    grid-row-start: 4;
+}
+
+.comments {
+    grid-column: span 5 / span 5;
+    grid-row-start: 5;
+}
+        
+/* product_layout start */
+
 /* footer start */
 .footer {
     width: 100%;
@@ -398,7 +402,10 @@ body {
 }
 /* footer end */
 
-
-
-/* arreglar overflow de header */
-/* ordenar header */
+/* organizar css */
+/* agregar disqus */
+/* https://www.youtube.com/watch?v=Dr6pSdeJgkA */
+/* https://www.youtube.com/watch?v=a-V7OIi1NWw */
+/* terminar Plantilla */
+/* separar css independiente */
+/* integrar sistema de cuentas de google */

@@ -18,12 +18,12 @@ body {
 
 .layout {
     width: 100vw;
-    padding: 4vw 0vw 0vw 0vw;
+    padding: 3.5vw 0vw 0vw 0vw;
     display: grid;
     grid-template-rows: auto auto auto;
 }
 
-/* header styles */
+/* -----------------------------------------------------------------------------header styles---------------------------------------------------------------------- */
 .header {
     width: 100vw;
     max-height:7vh;
@@ -62,7 +62,7 @@ body {
 }
 
 .login_container {
-    width: 16vw;
+    min-width: 17vw;
     height:7vh;
     display: flex;
     align-items: center;
@@ -71,6 +71,8 @@ body {
 }
 
 .login_button {
+    
+    max-height: 6vh;
     font-size: 1rem;
     font-weight: 500;
     color: #FAFAFA;
@@ -104,17 +106,17 @@ body {
 
 /* account button end */
 
-/* header end */
+/* -----------------------------------------------------------------------------header end----------------------------------------------------------------------------- */
 
-/* main begin */
+/* -----------------------------------------------------------------------------main begin----------------------------------------------------------------------------- */
 .main {
     flex-grow: 1; 
     width: 100%;
-    padding:0px 25px 0px 25px;
     background-color: #252525;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    padding: 0px 25px 40px 25px;
 }
 
 
@@ -126,6 +128,7 @@ body {
     height: auto;
     position: relative;
     margin: 0 auto;
+    padding-top: 10px;
 }
 
 
@@ -198,15 +201,14 @@ body {
 .item {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    background-color: rgb(10, 10, 10);
-    padding: 20px;
+    padding: 10px;
     border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    width: 100%; 
+    flex: 1 1 250px;
     max-width: 300px;
-    margin: 0 auto; 
+    box-sizing: border-box;
+    margin: 1rem;
 }
 
 
@@ -222,14 +224,12 @@ body {
 /* category panel start */
 .category_container {
     width: 100%;
-    height: auto;
     display: flex;
     flex-wrap: wrap;
-    gap: 7px;
-    justify-content: space-around;
-    padding: 20px 1px 30px 1px;
+    gap: 0.933vw;
+    justify-content: flex-start;
+    padding-bottom: 50px;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
     row-gap: 10px;
 }
@@ -238,12 +238,17 @@ body {
 
 .brutalist-card {
     width: 250px;
-    border: 4px solid #fafafa;
+    border: 4px solid #ccc;
     background-color: #252525;
     padding: 1.3rem;
-    box-shadow: 10px 10px 0 #fafafa;
-    font-family: "DM Mono", monospace;
+    box-shadow: 10px 10px 0 #ccc;
+    transition: transform 0.3s, box-shadow 0.3s;
 }
+
+.brutalist-card:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 17px 17px 0 #000;
+  }
 
 .brutalist-card__header {
     display: flex;
@@ -252,10 +257,9 @@ body {
     margin-bottom: 0.5rem;
     border-bottom: 2px solid #fafafa;
     padding-bottom: 0.5rem;
-}
-
-.brutalist-card__actions {
-    margin-top: 1rem;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;   
 }
 
 .brutalist-card__button {
@@ -265,12 +269,12 @@ body {
     text-align: center;
     font-size: 1rem;
     font-weight: 500;
-    border: 3px solid #fafafa;
+    border: 3px solid #ccc;
     background-color: #252525;
     color: #fafafa;
     position: relative;
     transition: all 0.2s ease;
-    box-shadow: 5px 5px 0 #fafafa;
+    box-shadow: 5px 5px 0 #ccc;
     overflow: hidden;
     text-decoration: none;
     margin-bottom: 0.5rem;
@@ -287,112 +291,213 @@ body {
     box-shadow: none;
 }
 
+.brutalist-card__actions {
+    margin-top: 1rem;
+    color:#fafafa;
+    text-align: center;
+}
+
+.product-card {
+    width: 17vw;
+    height: 20vw;
+    border: 4px solid #ccc;
+    background-color: #252525;
+    padding: 1.3rem;
+    box-shadow: 10px 10px 0 #ccc;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.product-card:hover {
+    transform: translate(-5px, -5px);
+    box-shadow: 17px 17px 0 #000;
+  }
+
+.product-card__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 0.5rem;
+    border-bottom: 2px solid #fafafa;
+    padding-bottom: 0.5rem;
+    overflow: hidden;
+}
+
+.product-card__header img {
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+.product-card_price {
+    margin-top: 1rem;
+    color:#fafafa;
+    text-align: center;
+}
+
+.product-card_name {
+    margin-top: 1rem;
+    color:#fafafa;
+    text-align: center;
+    font-weight: 500;
+}
+
 /* content card end */
 
 /* category panel end */
+
 
 /* store_layout start */
 .store_layout {
     width: 100%;
     display: flex;
-    gap: 50px;
     flex-wrap: wrap;
-    margin: 2%;
+    gap: 1rem;
+    justify-content: flex-start;
     align-items: flex-start;
-    justify-content: center;
 }
 /* store_layout end */
 
 /* product_layout start */
 
+.photo {
+    width: 100%;
+    padding-top: 0px;
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
 .product_layout {
     display: grid;
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    grid-template-rows: auto;
     gap: 8px;
-    padding-top:200px ;
+    padding-top:1vh;
 }
-    
-.product{
-    padding: 100px;
-    border-radius:50px;
-    border:2px solid #252525;
+
+.product {
     background-color: yellow;
     text-align: center;
 }
 
-.photo {
-    grid-column: span 5 / span 5;  
-    height: 20px;  
-}
-
 .map {
-    grid-column: span 2 / span 2;
-    grid-row: span 2 / span 2;
-    grid-row-start: 2;
+	grid-column:1/3;
+	grid-row:1/3;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;     
+    padding: 3px;
 }
-
 .p_1 {
-    grid-column-start: 3;
-    grid-row-start: 2;
+	grid-column:3/4;
+	grid-row:1/2;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;     
+    padding: 3px;
 }
-
 .p_2 {
-    grid-column-start: 4;
-    grid-row-start: 2;
+	grid-column:4/5;
+	grid-row:1/2;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;     
+    padding: 3px;   
 }
 
 .p_3 {
-    grid-column-start: 5;
-    grid-row-start: 2;
+	grid-column:5/6;
+	grid-row:1/2;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;     
+    padding: 3px;
 }
-
 .p_4 {
-    grid-column-start: 3;
-    grid-row-start: 3;
+	grid-column:3/4;
+	grid-row:2/3;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;     
+    padding: 3px;
 }
-
 .p_5 {
-    grid-column-start: 4;
-    grid-row-start: 3;
+	grid-column:4/5;
+	grid-row:2/3;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;     
+    padding: 3px;
 }
-
 .p_6 {
-    grid-column-start: 5;
-    grid-row-start: 3;
+	grid-column:5/6;
+	grid-row:2/3;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;     
+    padding: 3px;
 }
-
 .p_7 {
-    grid-row-start: 4;
+	grid-column:1/2;
+	grid-row:3/4;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;     
+    padding: 3px;
 }
-
 .p_8 {
-    grid-row-start: 4;
+	grid-column:2/3;
+	grid-row:3/4;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;     
+    padding: 3px;
 }
-
 .p_9 {
-    grid-row-start: 4;
+	grid-column:3/4;
+	grid-row:3/4;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;     
+    padding: 3px;
 }
-
 .p_10 {
-    grid-row-start: 4;
+	grid-column:4/5;
+	grid-row:3/4;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;     
+    padding: 3px;
 }
-
 .p_11 {
-    grid-row-start: 4;
+	grid-column:5/6;
+	grid-row:3/4;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;     
+    padding: 3px;
+}
+.comments {
+	grid-column:1/6;
+	grid-row:4/5;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;     
+    padding: 3px;
 }
 
-.comments {
-    grid-column: span 5 / span 5;
-    grid-row-start: 5;
-}
-        
-/* product_layout start */
+
+
+/* product_layout end */
 
 /* footer start */
 .footer {
     width: 100%;
-    height: auto; /* Adjust to fit content */
+    height: auto;
     position: fixed;
     bottom: 0;
     background-color: #004280;
@@ -402,10 +507,12 @@ body {
 }
 /* footer end */
 
-/* organizar css */
 /* agregar disqus */
+/* https://commentbox.io/ */
 /* https://www.youtube.com/watch?v=Dr6pSdeJgkA */
 /* https://www.youtube.com/watch?v=a-V7OIi1NWw */
 /* terminar Plantilla */
-/* separar css independiente */
-/* integrar sistema de cuentas de google */
+
+/* https://www.youtube.com/watch?v=s4dzDhnvznE */
+/* sistema de bsuqueda */
+
